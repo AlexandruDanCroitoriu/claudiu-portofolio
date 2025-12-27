@@ -4,7 +4,15 @@ export const claudiuData = {
     name: "Claudiu Spătaru",
     title: "Chitarist Profesionist / Profesor / Performer Live",
     subtitle: "Muzică cu suflet, tehnică și versatilitate",
-    bio: "Sunt Claudiu Spătaru, chitarist profesionist, performer live și profesor de chitară. Muzica este centrul vieții mele și principala formă prin care îmi exprim identitatea, atât pe scenă, cât și în lucrul direct cu elevii mei. Activez în zona de evenimente private, concerte și colaborări artistice, având experiență în contexte diverse: nunți, evenimente corporate, show-uri live și proiecte de cover-uri. Abordez stiluri variate precum rock, pop, flamenco și influențe balcanice, punând accent pe versatilitate, expresivitate și adaptarea la public.",
+    bio: `Sunt Claudiu Spataru, chitarist profesionist, performer live si profesor de chitara. Muzica este centrul vietii mele si principala forma prin care imi exprim identitatea, atat pe scena, cat si in lucrul direct cu elevii mei.
+
+Activez in zona de evenimente private, concerte si colaborari artistice, avand experienta in contexte foarte diverse: nunti, evenimente corporate, show-uri live si proiecte de cover-uri. Abordez stiluri variate precum rock, pop, flamenco si influente balcanice, punand accent pe versatilitate, expresivitate si adaptarea la public.
+
+Pe langa activitatea de scena, predau chitara si lucrez individual cu elevi de nivel incepator, mediu si avansat. Abordarea mea ca profesor este una structurata, dar flexibila, orientata spre intelegerea reala a instrumentului, dezvoltarea tehnicii si a muzicalitatii, nu doar memorarea unor piese. Fiecare elev are un parcurs adaptat obiectivelor sale, fie ca isi doreste sa cante din placere, sa urce pe scena sau sa aprofundeze studiul instrumentului.
+
+Pun mare accent pe sunet, dinamica si control tehnic, atat in interpretare, cat si in procesul de invatare. Lucrez cu echipamente profesionale si tratez fiecare aparitie si fiecare ora de studiu cu seriozitate si implicare.
+
+Sunt deschis colaborarilor cu artisti, organizatori de evenimente, scoli de muzica si branduri care apreciaza profesionalismul, pasiunea si atentia la detalii.`,
     yearsExperience: 12,
     location: "București, România",
     email: "contact@claudiuspataru.ro",
