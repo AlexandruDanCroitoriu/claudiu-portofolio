@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-white text-zinc-900">
+  <div class="bg-white text-zinc-900"> 
     <Hero />
     <About />
     <Footer />
