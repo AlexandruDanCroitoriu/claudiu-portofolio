@@ -1,16 +1,16 @@
 export const claudiuData = {
   // Personal Information
   personal: {
-    name: "Claudiu Marian Spataru",
-    title: "Guitarist Trainer / Composer / Performer",
-    subtitle: "Feel every note",
-    bio: "I'm Claudiu Marian Spataru, a guitarist and composer blending modern tones with soulful phrasing. After more than a decade on stages and in studios, I help listeners and students connect with music that feels alive and honest.",
+    name: "Claudiu Spătaru",
+    title: "Chitarist Profesionist / Profesor / Performer Live",
+    subtitle: "Muzică cu suflet, tehnică și versatilitate",
+    bio: "Sunt Claudiu Spătaru, chitarist profesionist, performer live și profesor de chitară. Muzica este centrul vieții mele și principala formă prin care îmi exprim identitatea, atât pe scenă, cât și în lucrul direct cu elevii mei. Activez în zona de evenimente private, concerte și colaborări artistice, având experiență în contexte diverse: nunți, evenimente corporate, show-uri live și proiecte de cover-uri. Abordez stiluri variate precum rock, pop, flamenco și influențe balcanice, punând accent pe versatilitate, expresivitate și adaptarea la public.",
     yearsExperience: 12,
-    location: "Bucharest, Romania",
-    email: "hello@claudiuguitar.com",
-    phone: "+40 (722) 000 000",
-    profileImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80",
-    heroImage: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=1200&q=80"
+    location: "București, România",
+    email: "contact@claudiuspataru.ro",
+    phone: "+40 722 000 000",
+    profileImage: new URL('../assets/images/1.jpeg', import.meta.url).href,
+    heroImage: new URL('../assets/images/12.jpeg', import.meta.url).href
   },
 
   // Professional Credentials
@@ -21,75 +21,12 @@ export const claudiuData = {
     "12+ years on stage and in studio"
   ],
 
-  // Core Services
-  services: [
-    {
-      id: "private-lessons",
-      title: "Private Guitar Lessons",
-      description: "One-on-one coaching tailored to your style—rock, blues, fusion, or acoustic. We focus on tone, timing, phrasing, and the theory that makes creativity feel natural."
-    },
-    {
-      id: "studio-sessions",
-      title: "Studio & Session Work",
-      description: "Professional tracking for albums, film, and ads. I bring melodic lines, textures, and solos that serve the song while keeping deadlines tight."
-    },
-    {
-      id: "live-performance",
-      title: "Live Performance & Events",
-      description: "Dynamic sets for concerts, private events, and showcases. From intimate acoustic moments to full-band energy, every performance is dialed for the room."
-    }
-  ],
-
   // Social Media Links
   socialMedia: {
     instagram: "#",
     youtube: "#",
     facebook: "#",
     linkedin: "#"
-  },
-
-  // Why Me Section
-  whyMe: {
-    title: "Why Me",
-    subtitle: "What sets my playing and coaching apart",
-    reasons: [
-      {
-        id: "proven-results",
-        title: "Stage & Studio Ready",
-        description: "Hundreds of shows and sessions—arriving prepared, reading the room, and delivering takes that feel alive."
-      },
-      {
-        id: "personalized-approach",
-        title: "Tailored To You",
-        description: "Lessons and collaborations adapt to your goals, whether you need foundational chops, tasteful lead work, or cinematic textures."
-      },
-      {
-        id: "ongoing-support",
-        title: "Collaborative Process",
-        description: "Clear communication, shared references, and quick revisions keep projects moving smoothly."
-      },
-      {
-        id: "scientific-methods",
-        title: "Musical Intent",
-        description: "Theory-backed choices that serve emotion first—tone, harmony, and dynamics are crafted for the story of each track."
-      }
-    ]
-  },
-
-  // Who I Am Section
-  whoIAm: {
-    title: "Who I Am",
-    subtitle: "Get to know the guitarist behind the sound",
-    story: "I grew up obsessed with melody and dynamics, learning to translate emotions into riffs, chord voicings, and textures. After conservatory study, countless rehearsals, and tours across clubs and festivals, I balance teaching with creating guitar parts that feel cinematic and human.",
-    achievements: [
-      "Conservatory graduate in guitar performance",
-      "Recorded and performed on 50+ tracks for artists and film cues",
-      "Shared stages with touring acts across Europe",
-      "Coach to beginner and intermediate players seeking feel and tone",
-      "Arranger for small ensembles and live showcases",
-      "Comfortable across rock, blues, fusion, acoustic, and cinematic"
-    ],
-    philosophy: "Music should move people. Technique and theory matter, but the goal is always storytelling—serving the song, the scene, or the student in front of me."
   },
 
   // Contact Information
@@ -126,6 +63,105 @@ export const claudiuData = {
     ]
   },
 
+  // Gallery
+  gallery: {
+    title: "Gallery",
+    subtitle: "Moments from performances, studio sessions, and musical journeys",
+    images: [
+      {
+        id: 1,
+        src: new URL('../assets/images/1.jpeg', import.meta.url).href,
+        alt: "Claudiu Marian Spataru performing",
+        caption: "",
+        size: "large"
+      },
+      {
+        id: 2,
+        src: new URL('../assets/images/2.jpeg', import.meta.url).href,
+        alt: "Studio session",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 3,
+        src: new URL('../assets/images/3.jpeg', import.meta.url).href,
+        alt: "Live performance",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 4,
+        src: new URL('../assets/images/4.jpeg', import.meta.url).href,
+        alt: "Guitar performance",
+        caption: "",
+        size: "large"
+      },
+      {
+        id: 5,
+        src: new URL('../assets/images/5.jpeg', import.meta.url).href,
+        alt: "Musical moment",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 6,
+        src: new URL('../assets/images/6.jpeg', import.meta.url).href,
+        alt: "On stage",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 7,
+        src: new URL('../assets/images/7.jpeg', import.meta.url).href,
+        alt: "Performance shot",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 8,
+        src: new URL('../assets/images/8.jpeg', import.meta.url).href,
+        alt: "Studio work",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 9,
+        src: new URL('../assets/images/9.jpeg', import.meta.url).href,
+        alt: "Live session",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 10,
+        src: new URL('../assets/images/10.jpeg', import.meta.url).href,
+        alt: "Guitar close-up",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 11,
+        src: new URL('../assets/images/11.jpeg', import.meta.url).href,
+        alt: "Musical expression",
+        caption: "",
+        size: "small"
+      },
+      {
+        id: 12,
+        src: new URL('../assets/images/12.jpeg', import.meta.url).href,
+        alt: "Performance moment",
+        caption: "",
+        size: "large"
+      },
+      {
+        id: 13,
+        src: new URL('../assets/images/13.jpeg', import.meta.url).href,
+        alt: "Stage presence",
+        caption: "",
+        size: "small"
+      }
+    ]
+  },
+
   // UI Text and Labels
   ui: {
     buttons: {
@@ -136,31 +172,12 @@ export const claudiuData = {
       seeDetails: "Vezi detalii" // Romanian for "See details"
     },
     sections: {
-      services: {
-        title: "Services",
-        subtitle: "Guitar performances, studio work, and tailored coaching for players who want to sound intentional.",
-        bookPrefix: "Book" // For "Book Private Guitar Lessons" etc.
-      },
       contact: {
         phoneLabel: "Telefon", // Romanian for "Phone"
         emailLabel: "Email",
         addressLabel: "Address",
         workingHoursTitle: "Working Hours",
         getInTouchTitle: "Get In Touch"
-      },
-      whyMe: {
-        callToActionText: "Ready to craft your sound?"
-      },
-      whoIAm: {
-        callToActionText: "Let's shape your tone and musical story",
-        storyTitle: "My Story",
-        achievementsTitle: "Achievements & Credentials",
-        philosophyTitle: "My Philosophy",
-        clientsHelped: "Students Coached",
-        yearsExperienceLabel: "Years Experience"
-      },
-      header: {
-        yearsLabel: "Years"
       }
     }
   },

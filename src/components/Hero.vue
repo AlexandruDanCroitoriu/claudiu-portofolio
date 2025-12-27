@@ -1,7 +1,7 @@
 <template>
-  <section class="relative bg-amber-50 py-16 md:py-24 overflow-hidden">
-    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-      <div>
+  <section ref="sectionRef" class="relative bg-amber-50 text-zinc-900 min-h-screen flex items-center overflow-hidden opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
+    <div class="w-full container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div class="translate-y-10 opacity-0 transition-all duration-1000" :class="{ 'translate-y-0 opacity-100': isVisible }">
         <span class="text-amber-600 uppercase tracking-[0.2em] text-xs">Guitarist & Composer</span>
         <h1 class="mt-3 text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-900">
           {{ firstName }} <br class="md:hidden"/> {{ lastName }}
@@ -10,7 +10,7 @@
           View My Reel
         </button>
       </div>
-      <div class="relative">
+      <div class="relative translate-y-10 opacity-0 transition-all duration-1000 delay-200" :class="{ 'translate-y-0 opacity-100': isVisible }">
         <div class="absolute -inset-4 -z-10 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100"></div>
         <img :src="claudiuData.personal.heroImage" alt="Guitarist performing" class="relative rounded-2xl shadow-[0_12px_30px_rgba(17,24,39,0.15)] object-cover w-full h-[320px] md:h-[420px]"/>
         <!-- Simple vertical social bar -->
@@ -25,10 +25,24 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 import claudiuData from '../data/claudiuData.js'
 
 const [firstName, ...restName] = claudiuData.personal.name.split(' ')
 const lastName = restName.join(' ')
+
+const sectionRef = ref(null)
+const isVisible = ref(false)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(([entry]) => {
+    isVisible.value = entry.isIntersecting
+  }, { threshold: 0.1 })
+  
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
 </script>
 
 <style scoped>

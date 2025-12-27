@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
+import Gallery from './components/Gallery.vue'
 import Footer from './components/Footer.vue'
 
 onMounted(() => {
@@ -13,6 +14,7 @@ onMounted(() => {
   <div class="bg-white text-zinc-900"> 
     <Hero />
     <About />
+    <Gallery />
     <Footer />
   </div>
 </template>
