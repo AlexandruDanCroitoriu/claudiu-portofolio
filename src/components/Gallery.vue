@@ -1,11 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import claudiuData from '../data/claudiuData.js'
 
 const { title, subtitle, images } = claudiuData.gallery
 
 const sectionRef = ref(null)
 const isVisible = ref(false)
+const itemRefs = ref([])
+const imageVisible = ref([])
 
 // Lightbox state
 const selectedImage = ref(null)
@@ -48,19 +50,40 @@ if (typeof window !== 'undefined') {
   window.addEventListener('keydown', handleKeydown)
 }
 
-onMounted(() => {
-  const observer = new IntersectionObserver(([entry]) => {
+let imgObserver
+onMounted(async () => {
+  // Section observer (controls header and section fade)
+  const sectionObserver = new IntersectionObserver(([entry]) => {
     isVisible.value = entry.isIntersecting
   }, { threshold: 0.1 })
-  
   if (sectionRef.value) {
-    observer.observe(sectionRef.value)
+    sectionObserver.observe(sectionRef.value)
   }
+
+  // Per-image observer (controls individual image reveal/hide)
+  imgObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const idx = Number(entry.target.dataset.index)
+      if (!Number.isNaN(idx)) {
+        imageVisible.value[idx] = entry.isIntersecting
+      }
+    })
+  }, { threshold: 0.1 })
+
+  await nextTick()
+  itemRefs.value.forEach((el, idx) => {
+    imageVisible.value[idx] = false
+    imgObserver.observe(el)
+  })
+})
+
+onUnmounted(() => {
+  if (imgObserver) imgObserver.disconnect()
 })
 </script>
 
 <template>
-  <section ref="sectionRef" id="gallery" class="bg-amber-50 text-zinc-900 min-h-screen flex items-center py-16 px-4 opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
+  <section ref="sectionRef" id="gallery" class="bg-amber-50 text-zinc-900 flex items-center py-16 px-4 opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
     <div class="w-full container mx-auto max-w-7xl">
       <!-- Section Header -->
       <div class="text-center mb-12">
@@ -77,12 +100,13 @@ onMounted(() => {
         <div
           v-for="(image, index) in images"
           :key="image.id"
+          ref="itemRefs"
+          :data-index="index"
           :class="[
             'group relative overflow-hidden rounded-lg cursor-pointer bg-white shadow-sm hover:shadow-lg transition-all duration-700 translate-y-10 opacity-0',
             image.size === 'large' ? 'md:col-span-2 md:row-span-2' : 'col-span-1',
-            isVisible && `delay-${(index % 5) * 100}`
+            imageVisible[index] ? 'opacity-100 translate-y-0' : ''
           ]"
-          :style="isVisible ? { opacity: 1, transform: 'translateY(0)' } : {}"
           @click="openLightbox(image, index)"
         >
           <img

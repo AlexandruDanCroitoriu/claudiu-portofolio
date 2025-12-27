@@ -1,5 +1,5 @@
 <template>
-  <footer ref="sectionRef" class="bg-gradient-to-br from-amber-100 via-orange-50 to-amber-50 text-zinc-900 min-h-screen flex items-center py-14 border-t border-[#F1DEC6] opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
+  <footer ref="sectionRef" class="bg-gradient-to-br from-amber-100 via-orange-50 to-amber-50 text-zinc-900 flex items-center py-14 border-t border-[#F1DEC6] opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
     <div class="w-full container mx-auto px-4">
       <div class="max-w-6xl mx-auto grid md:grid-cols-[1.6fr_1fr] gap-10 items-start">
 

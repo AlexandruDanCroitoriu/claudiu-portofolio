@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef" class="relative bg-white text-zinc-900 min-h-screen flex items-center py-16 opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
+  <section ref="sectionRef" class="relative bg-white text-zinc-900 flex items-center py-16 opacity-0 transition-opacity duration-1000" :class="{ 'opacity-100': isVisible }">
     <div class="w-full container mx-auto px-4 grid md:grid-cols-[1fr_1.2fr] gap-8 items-center">
       <div class="relative translate-y-10 opacity-0 transition-all duration-1000" :class="{ 'translate-y-0 opacity-100': isVisible }">
         <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80" alt="About photo" class="rounded-xl shadow-[0_12px_30px_rgba(17,24,39,0.15)] object-cover w-full h-[340px] md:h-[420px]"/>
